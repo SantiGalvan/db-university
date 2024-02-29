@@ -14,3 +14,4 @@ Pensiamo a quali entità (tabelle) creare per il nostro database e cerchiamo poi
 Infine, andiamo a definire le colonne e i tipi di dato di ogni tabella.
 Esportare il diagramma in jpg e caricarlo nella repo.
 
+![Diagramma db-univesity](db-university.png)
