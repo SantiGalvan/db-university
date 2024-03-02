@@ -23,3 +23,9 @@ SELECT COUNT(*) AS `n_departments` FROM `departments`;
 
 -- 8. Quanti sono gli insegnanti che non hanno un numero di telefono? (50)
 SELECT COUNT(*) AS `n_teachers_phone` FROM `teachers` WHERE `phone` IS NOT NULL;
+
+---------------- QUERY CON GROUP BY ----------------------
+
+
+-- 1. Contare quanti iscritti ci sono stati ogni anno
+SELECT COUNT(*) AS `n_students_on_date`, `enrolment_date` FROM `students` GROUP BY `enrolment_date`;
