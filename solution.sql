@@ -45,3 +45,6 @@ SELECT COUNT(`department_id`) AS `n_courses` FROM `degrees` GROUP BY `department
 
 -- 1. Selezionare tutti gli studenti iscritti al Corso di Laurea in Economia
 SELECT S.`id` , S.`name` AS `student_name`, S.`surname` AS `student_surname` FROM `students` AS S JOIN `degrees` AS D ON D.`id` = S.`degree_id` WHERE D.`name` = 'Corso di Laurea in Economia';
+
+-- 2. Selezionare tutti i Corsi di Laurea del Dipartimento di Neuroscienze
+SELECT * FROM `degrees` AS DEG JOIN `departments` AS DEP ON DEP.`id` = DEG.`department_id` WHERE DEP.`name` = 'Dipartimento di Neuroscienze';
