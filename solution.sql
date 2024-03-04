@@ -16,16 +16,17 @@ SELECT * FROM `courses` WHERE `period` = 'I semestre' AND `year` = 1;
 SELECT * FROM `exams` WHERE `date` = '2020-06-20' AND `hour` > '14:00:00';
 
 -- 6. Selezionare tutti i corsi di laurea magistrale (38)
-SELECT * FROM `degrees` WHERE `name` LIKE 'Corso di Laurea Magistrale%';
+SELECT * FROM `degrees` WHERE `level` = 'magistrale';
 
 -- 7. Da quanti dipartimenti è composta l'università? (12)
 SELECT COUNT(*) AS `n_departments` FROM `departments`;
 
 -- 8. Quanti sono gli insegnanti che non hanno un numero di telefono? (50)
-SELECT COUNT(*) AS `n_teachers_phone` FROM `teachers` WHERE `phone` IS NOT NULL;
+SELECT COUNT(*) AS `n_teachers_phone` FROM `teachers` WHERE `phone` IS NULL;
+
+
 
 ---------------- QUERY CON GROUP BY ----------------------
-
 
 -- 1. Contare quanti iscritti ci sono stati ogni anno
 SELECT COUNT(*) AS `n_students_on_date`, `enrolment_date` FROM `students` GROUP BY `enrolment_date`;
