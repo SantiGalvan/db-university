@@ -39,3 +39,9 @@ SELECT AVG(`vote`) AS `average_vote`, `exam_id` FROM `exam_student` GROUP BY `ex
 
 -- 4. Contare quanti corsi di laurea ci sono per ogni dipartimento
 SELECT COUNT(`department_id`) AS `n_courses` FROM `degrees` GROUP BY `department_id`;
+
+
+---------------- QUERY CON JOIN ----------------------
+
+-- 1. Selezionare tutti gli studenti iscritti al Corso di Laurea in Economia
+SELECT S.`id` , S.`name` AS `student_name`, S.`surname` AS `student_surname` FROM `students` AS S JOIN `degrees` AS D ON D.`id` = S.`degree_id` WHERE D.`name` = 'Corso di Laurea in Economia';
